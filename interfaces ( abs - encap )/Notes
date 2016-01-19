@@ -1,0 +1,9 @@
+
+
+e.g
+
+   Car   --> doMove()   dependent
+   Wheel --> doRotate() dependency
+   
+   
+   dependent -- 'HAS-A' -- dependent

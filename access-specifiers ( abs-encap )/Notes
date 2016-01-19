@@ -1,0 +1,55 @@
+
+
+
+   e.g
+   
+   
+      Proj
+      
+          p1
+          
+            A               ( target )
+            B  extends A
+            C
+          
+          p2
+          
+            D extends A
+            E
+            
+            
+            
+      4 access specifiers
+      
+      public
+      private
+      protected
+      (        )   // default or package      
+      
+      
+      -----------------------------------------
+      
+      
+      
+		       same-package                             other-package
+		       
+		       same-class | sub-class | other-class    sub-class | other-class
+		      
+	private       Y          N             N              N           N	      
+    (     )       Y          Y             Y              N           N
+    protected     Y          Y             Y              Y           N
+    public        Y          Y             Y              Y           Y    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

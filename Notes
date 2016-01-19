@@ -1,0 +1,387 @@
+
+  ------------------------------------------------
+
+  SET PATH   ( OS envi var )
+  
+         platform shud know where 'java' is
+  
+  SET CLASSPATH ( JRE envi var )
+  
+         JRE/classloader shud where '.class' file are
+         
+         
+  ------------------------------------------------  
+  
+  
+  Java IDE / Build-tools
+  
+  1. Netbeans 
+  2. Eclipse    ( most popular )
+  3. JDeveloper
+  4. IntelliJ
+  
+ --------------------------------------------------
+ 
+  Java - syntax
+  -------------
+  
+  
+  1. project
+  
+  
+      proj
+      |
+      |-- p1  ( .java / .class )
+      |
+      |--p2
+      ||---p21
+      |
+  
+  ================================================
+  
+  2. Java-File
+  
+  
+     Name.java
+    -------------------------------
+    |
+    | // package dec         ( 1 )
+    | // import statement(s) ( n )
+    |
+    | // public class Name   ( 1 )
+    | // default class(s)    ( n )
+    |
+    | 
+    |------------------------------
+ 
+  ================================================
+ 
+ 3. package syntax
+ 
+    why we need ?
+    
+    to group logicall related java-files into one folder.
+    
+    adv
+    
+    --> to avoid naming colissions
+    --> easy to maintain
+    
+    syntax
+    
+    package root;
+            root.sub1;
+            root.sub1.sub2;
+            
+   guideline form community to write package names
+   
+   
+   e.g
+   
+      file    : Employee.java
+      module  : emp
+      project : EM
+      company : cts
+      type    : commercial         
+ 
+   package c-type.c-name.p-name.m-name;
+   
+   package com.cts.em.emp;
+ 
+ 
+  ================================================
+  
+  
+  4. import - syntax
+  
+  import package.ClassName;
+  import package.*;
+  import package.sub.*;
+  
+  in JDK 1.5 --> static import
+  
+  import static package.ClassName.*;  // to import static members from Class
+  
+  proj
+  
+     p1  --> A.java , B.java
+     p2  --> C.java , D.java
+         |
+         p21 --> E.java
+     p3  --> C.java
+ 
+ 
+   e.g
+   
+   package p1;
+   
+   //import p2.C;
+   //import p2.D;
+   
+   //or
+   
+   import p2.*;
+   import p3.*;
+   import p2.p21.*;
+  
+   public class A{
+   B b;
+   p3.C c;
+   D d;
+   E e;
+   }
+   
+  ====================================================================
+  
+   OO concepts
+   ------------
+   
+   what is object ?
+   
+   every object has 3 things :
+   
+   --> info , data , properties , attributes ( State    )
+   --> work , oprn , func       , methods    ( Behavior )
+   --> address , loc , reference             ( Idendity )
+  
+  Object ===> SBI
+  
+  
+  to do anthing , some-time we need many similar objects 
+  
+  e.g  100 emp objs
+  
+  100 * SBI
+  
+  
+  object template  ---> class
+  
+  
+  
+  
+  class
+  
+   --> descripption/template/blue-print of similar objects
+   
+   
+   class  ---> object
+  
+ ----------------------------------------------------------
+ 
+ class
+ object
+ 
+ --------------------------------------------------------------------
+ 
+ OO concepts
+
+ 
+  1. Abstraction
+  
+      object's Front-End/Interface
+      
+      why we need ?
+      
+      --> easy-to-use by other object
+      --> easy to learn
+  
+      showing essentials of the Object to other Object.
+  
+  2. Encapsulation
+  
+      object's Back-End/Implementation
+      
+      why we need ?
+      
+      --> to hide complexity
+      --> for security
+ 
+ 
+  3. Inheritance
+  
+    why we need ?
+    
+    by making generalized-class for specialized class's object,
+    we can inherit common state and behav.
+    
+  4. Ploymorphism
+  
+  
+    doing same-thing in different way based on input/envi  
+    
+    why we need ?
+    
+    "to satisfy 'closed for modifucation and open for Extension' princile "
+      
+ 
+  -----------------------------------------------------------------------------
+ 
+ Java --> OO PL
+ 
+  ------------------------------------------------------------------------------
+ 
+ 
+  =============================================================================
+ 
+ 
+ 5. class - syntax
+ 
+       
+    ________       _________       class Name [extends] Base-Class {
+    [public]      [abstract]                 [implements] Interface1,Interface2
+    [      ]      [final   ]             
+                  [strictfp]            
+                                        // State -> variable(s) 
+                                        // Constructor(s)
+                                        // Behavior(s) -> methods
+    -------------------------                                   
+    [private]     [static]             // Inner-Class(s)
+    [public]                               
+    [protected]
+    [         ]                    }   
+ 
+ 
+ 
+  ===========================================================================
+  
+  6. varibales - syntax
+  
+  why we need ?
+  
+  to hold/refer data in memory
+  
+  2 types of datatype
+  
+   --> primitive/simple values  e.g int v=12;
+   --> reference                e.g person
+   
+   e.g
+   
+    class Employee{
+    
+    static String trName; // class-var
+    int empId;  // object-var
+    
+    void m(){
+    int i;  // local var
+    }
+    
+    }
+  
+    syntax
+    
+    _________      _________ datatype varName=[value/object];
+    [public]     [ static  ]
+    [private]    [ final   ]
+    [protected]  [ transient]
+    [         ]  [ volatile ]
+    
+    local-var
+    -----------------------
+    - Nil-       [ final ]
+    
+    
+     ===========================================================================
+  
+  
+     7. constructor
+     
+       why we need ?
+       
+       
+       In Java , object creation 2-step process
+       
+       step-1 : synamic memory allocation from 'Heap'  : 'new'
+       step-2 : initilize memory with obj's values     : constructor
+     
+       syntax
+       
+       
+      __________ ClassName([args])[thows] Exception{
+      [public] 
+      [private]     // obj initialization/construction logic.
+      [protected]
+      [         ]
+                  }
+                  
+                  
+     ===========================================================================
+  
+     8. method - syntax
+     
+     return-type
+     
+     --> void
+     --> primitive
+     --> reference
+     
+     
+     e.g
+     
+     class TrainingRoom{
+     static void teach(){}
+     void listen(){}
+     }
+     
+        
+    ________      __________         ReturnType methodName([args])[throws]Exception{
+    [public]       [ static  ]         
+    [protected]    [ final   ]         // A,L,R and assingnment oprn.
+    [private]      [ strictfp]         // Conditional exe
+    [       ]      [ synchronized ]    // Looping Exe
+                    [ abstract ]        // Invoke other method
+                    [ native   ]         
+                                        [return] [result] / value or object
+                    
+                    
+                                        }
+                                    
+                  
+     ===========================================================================
+  
+     9. Interface
+     
+     _________ interface Name [extends] Interface1,Interface2{
+     
+     // public static final datatype varName=value;  // constant var
+     // public abstract ReturnType methodName([args])[throws]Exception;
+     
+     // In JDK 1.8
+     
+     public default void dm(){
+        // logic
+     }
+     
+     public sattic void sm(){
+     
+     }
+     
+     }
+     
+      ===========================================================================
+  
+  
+      10. Enum ( from 1.5 )
+      
+      why we need ?
+      
+      to group related constants with type
+      
+      public enum Gender{
+      MALE,FEMALE,OTHER
+      }
+      
+      ===========================================================================
+  
+  
+      11. Annotation
+      
+      public @interface Name{
+      
+      //properties
+      public String prop();
+      
+      }
+      
+      ===========================================================================
+  
