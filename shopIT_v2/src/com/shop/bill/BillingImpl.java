@@ -1,6 +1,6 @@
 package com.shop.bill;
 
-import com.shop.pm.PriceMatrixImpl_v1;
+import com.shop.pm.PriceMatrix;
 
 //import com.shop.pm.PriceMatrixImpl_v1;
 
@@ -63,16 +63,25 @@ import com.shop.pm.PriceMatrixImpl_v1;
  *    --> setter DI
  *  
  * 
+ * 
+ * "closed for modification , open for extension
+ * 
+ * 
+ * 
  */
 
 public class BillingImpl {
 
-	private PriceMatrixImpl_v1 priceMatrix;
+	private PriceMatrix priceMatrix;
+
+	public BillingImpl(PriceMatrix priceMatrix) {
+		super();
+		this.priceMatrix = priceMatrix;
+	}
 
 	public double getTotalPrice(String[] cart) {
 
 		double total = 0.0;
-		priceMatrix = new PriceMatrixImpl_v1();
 
 		for (int i = 0; i < cart.length; i++) {
 			total += priceMatrix.getPrice(cart[i]);
