@@ -171,8 +171,14 @@
       AbstractClass Vs Interface
       
       
+      A.C --> can have mutable state
+      I   --> Immutable state
+      
       
       -------------------------------------------------
+     
+     
+     How to handle 'Exception' in java lang
      
      
      

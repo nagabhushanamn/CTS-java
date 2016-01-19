@@ -1,0 +1,92 @@
+
+
+what is exception ?
+
+ un-expected program flow disturb
+ 
+ reasons for exceptions ?
+ 
+ --> divide by zero
+ --> array index out of bound
+ --> file not found exception
+ --> network exception.
+ 
+ etc.....
+ 
+ what happern if exception , didnt handle ?
+ 
+ by default every exception handled by JRE, 
+ i.e will terminate whole process.
+ 
+ soln:
+ 
+ need to avoid exception by writing error handling code
+ 
+ 
+   code = Business logic + Error Handling code ( if .. else.. )
+   
+   
+   best soln :
+   
+   using 'Exception handlers '
+   
+   adv
+   
+    1.Separating Error-Handling Code from "Regular" Code
+    2.Propagating Errors Up the Call Stack
+    3.Grouping and Differentiating Error Types
+   
+   -----------------------------------------------
+   
+   
+   Notes:
+   
+   --> if execution voilate any JRE error condition , 
+       always JRE will throw exception.
+   
+   --> 'exception' is an object which contains complete details exception.
+   
+   --> if we didnt catch exception , again JRE will catch exception , will terminate process.
+   
+   
+   ------------------------------------------------------
+   
+   how to handle exception ?
+   
+   
+   
+   use handlers
+   
+   
+   1. try-catch-finally
+   2. throws
+   3. throw
+   
+   -------------------------------------------------------
+   
+   
+   
+   types of exceptions
+   
+   a. checked exception
+   b. un-checked exception
+   
+   
+   -------------------------------------------------------
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+ 
