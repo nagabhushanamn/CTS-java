@@ -1,0 +1,189 @@
+
+ 
+  Abstration and Encapsulation
+  -----------------------------
+  
+  --> using access specifier
+  --> using accessor methods ( set/get )
+  
+  --> class and interfaces
+  
+  
+  Inheritance
+  --------------------
+  
+  why we need ?
+  
+  to inherit common state-def & behav 
+  from more generalized class to specialized class's objs.
+  
+   adv.
+   
+   --> can avoid much duplication code
+   --> easy to introduce new properties & behav
+   --> can make any obj design with 'closed for modification and open for extension" principle.
+   --> easy to extend your current system with new features.
+   
+   types of inheritance
+   
+   1. single-level
+   2. Multi-level
+   3. Multiple
+   
+   ----------------------
+   
+   
+   when to use inheritance ?
+   
+   
+   if 2 classes having 'IS-A' r/s 
+   
+   Employee IS-A Person
+   
+   Manager IS-A Employee
+   
+   ----------------------------------------
+   
+   
+   Polymophism
+   
+   One object , doing same-behav in different way based on input.
+   
+    static-ploy
+    dynamic-poly
+   
+   -------------------------------------
+   
+   
+   
+   Java Variables
+   
+   
+   
+     types of variables based on 'type'
+     
+     
+     1. primitive/simple 
+     
+        to hold values
+        
+        a. signed
+         
+           a. integral
+            
+              byte  ( 8  )
+              short ( 16 )
+              int   ( 32 )
+              long  ( 64 )
+              
+           b. real
+           
+              float  ( 32 )
+              double ( 64 ) 
+        
+        b. un-signed
+        
+              char  ( 16 )
+              
+        c. boolean
+        
+              boolean ( 1 )
+        
+     
+     2. reference
+     
+        to hold objects
+   
+   
+   
+   
+   
+     types of variables based on 'scope'
+     
+     
+      1. local variables
+      2. instance variables
+      3. class/static variables
+      
+      
+      -----------------
+     
+     
+     Abstract-class   vs  Interface
+     
+     
+     similarity
+     
+     --> for both we cant create instance
+     --> can include 'abstract methods
+     
+     
+     differences
+     
+     based on coding/synatx
+     
+     A.C --> can have both obj/static mutable varibales
+     I   --> olny constants
+     
+     A.C --> have constructor
+     I   --> no constructor
+     
+     A.C --> can have both concerete+abstract methods
+     I   --> only abstract methods
+     
+     
+     when to use which ?
+     
+     A.C --> while implementing 'Inheritance' ( when there is 'IS-A' )
+     I   --> to abstract dependency obj to dependent.
+     
+     
+     --------------------------------------------
+     
+     recommended class-hierarcy design
+     
+     
+     
+     Top-Level    --> Interfaces          ( 100 % abstraction   )
+     Middle-Level --> Abstract -classes   ( Partial abstraction )
+     Bottom-Level --> concrete classes    ( Ecapsulated         )
+     
+     -----------------------------------------------
+     
+     e.g  collection F.W
+     
+     
+     List ( I )
+     
+     AbstractSequentiaList ( A.C )
+     
+     ArrayList ( c )
+     LinkedList ( c )
+     
+     
+     ---------------------------------------------------
+     
+     
+     
+     JDK 1.8
+     
+     
+      AbstractClass Vs Interface
+      
+      
+      
+      -------------------------------------------------
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
